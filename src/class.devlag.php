@@ -2,6 +2,10 @@
 
 class Devlag
 {
+    const BE = 'https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg';
+    const DE = 'https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg';
+    const FR = 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg';
+    const LU = 'https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg';
     const NL = 'https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg';
 
     public $source;
