@@ -1,0 +1,16 @@
+{
+    "name": "deidee/devlag",
+    "description": "An API for generating country flags in various sizes and formats.",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "acj",
+            "email": "gitlab@acjs.net"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "ext-json": "^1.7"
+    }
+}

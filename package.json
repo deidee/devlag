@@ -1,0 +1,30 @@
+{
+  "name": "@deidee/devlag",
+  "version": "0.0.1",
+  "description": "An API for generating country flags in various sizes and formats.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deidee/devlag.git"
+  },
+  "keywords": [
+    "flag",
+    "api",
+    "svg"
+  ],
+  "author": "ACJ",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/deidee/devlag/issues"
+  },
+  "homepage": "https://github.com/deidee/devlag#readme",
+  "devDependencies": {
+    "svg-country-flags": "^1.2.7"
+  }
+}

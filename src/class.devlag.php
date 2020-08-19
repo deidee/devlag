@@ -2,12 +2,6 @@
 
 class Devlag
 {
-    const BE = 'https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg';
-    const DE = 'https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg';
-    const FR = 'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg';
-    const LU = 'https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg';
-    const NL = 'https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg';
-
     public $source;
 
     public function __construct($id = 'NL')
@@ -17,22 +11,34 @@ class Devlag
 
     public function __toString()
     {
-        return constant(get_class($this) . '::' . $this->source);
+        return 'test';
     }
 
     public function getContents()
     {
-        $source = constant(get_class($this) . '::' . $this->source);
+    	$path = dirname(__DIR__) . '/node_modules/svg-country-flags/svg/' . strtolower($this->source) . '.svg';
 
-        $contents = file_get_contents($source);
+        if(file_exists($path)) {
+        	return file_get_contents($path);
+        }
 
-        return $contents;
+        return FALSE;
     }
 
     public function parse()
     {
-        header('Content-Type: image/svg+xml');
+    	if($this->getContents()) {
 
-        echo $this->getContents();
+		    header('Content-Type: image/svg+xml');
+
+		    echo $this->getContents();
+
+	    } else {
+
+		    http_response_code(404);
+
+    		echo 'Not Found.';
+
+	    }
     }
 }
